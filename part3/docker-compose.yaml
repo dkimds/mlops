@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  mlflow-backend-store:
+    image: postgres:14.0
+    container_name: mlflow-backend-store
+    environment:
+      POSTGRES_USER: mlflowuser
+      POSTGRES_PASSWORD: mlflowpassword
+      POSTGRES_DB: mlflowdatabase
+    healthcheck:
+      test: ["CMD", "pg_isready", "-q", "-U", "mlflowuser", "-d", "mlflowdatabase"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
