@@ -1,4 +1,4 @@
 *.csv
 *.joblib
 
-part5/__pycache__
+*/__pycache__
