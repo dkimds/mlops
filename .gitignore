@@ -1,4 +1,4 @@
 *.csv
 *.joblib
-
+part6/sk_model
 */__pycache__
